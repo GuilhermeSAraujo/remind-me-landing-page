@@ -20,11 +20,11 @@ const faqItems = [
   },
   {
     question: "O que acontece quando atinjo o limite grátis?",
-    answer: "O bot te avisa e envia um link de pagamento. Após pagar, a ativação é automática — o bot confirma no WhatsApp em segundos.",
+    answer: "O bot te avisa e envia um link de pagamento. Após pagar, a ativação é automática, o bot confirma no WhatsApp em segundos.",
   },
   {
     question: "Meus lembretes são seguros?",
-    answer: "Guardamos apenas seu número de WhatsApp e os textos dos lembretes. Nenhuma informação financeira é processada pelo bot — o pagamento passa por uma plataforma segura externa.",
+    answer: "Guardamos apenas seu número de WhatsApp e os textos dos lembretes. Nenhuma informação financeira é processada pelo bot, o pagamento passa por uma plataforma segura externa.",
   },
   {
     question: "Funciona para lembretes recorrentes?",

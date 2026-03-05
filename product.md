@@ -1,8 +1,8 @@
-# Remind Me — Product Document
+# Remind Me, Product Document
 
 ## Overview
 
-**Remind Me** is a WhatsApp chatbot that allows Brazilian Portuguese-speaking users to create, manage, and receive personal reminders entirely through natural-language text messages. There is no app to install and no web interface to learn — the user simply sends a message like *"Me lembre de tomar remédio amanhã às 10h"* and the bot handles everything from scheduling to delivery.
+**Remind Me** is a WhatsApp chatbot that allows Brazilian Portuguese-speaking users to create, manage, and receive personal reminders entirely through natural-language text messages. There is no app to install and no web interface to learn, the user simply sends a message like *"Me lembre de tomar remédio amanhã às 10h"* and the bot handles everything from scheduling to delivery.
 
 The product targets everyday smartphone users in Brazil who already live inside WhatsApp and want a frictionless reminder experience without switching to a dedicated app.
 
@@ -25,7 +25,7 @@ User → WhatsApp → WPPConnect Server → Remind Me Bot → AI (Gemini) → Mo
 1. The user sends a WhatsApp message to the bot's number.
 2. **WPPConnect Server** (a self-hosted WhatsApp Web bridge) receives the message and forwards it as a webhook `POST /` to the Remind Me server.
 3. The server identifies the user by phone number and creates an account if they are new.
-4. The intent of the message is detected — first using fast regex patterns, then using Google Gemini AI as a fallback.
+4. The intent of the message is detected, first using fast regex patterns, then using Google Gemini AI as a fallback.
 5. The appropriate action is executed (create, list, delete, or delay a reminder).
 6. A confirmation reply is sent back through the WPPConnect Server to the user's WhatsApp.
 7. A `cron` job runs every minute to check for due reminders and deliver them via WhatsApp.
@@ -52,7 +52,7 @@ Sending a message like *"listar"* or *"quais são meus lembretes"* returns a num
 ### Deleting Reminders
 
 Reminders can be deleted in two ways:
-- Reply to any bot message with *"apagar"* (or synonyms like *"deletar"*, *"excluir"*) — the bot figures out which reminder the user is referring to.
+- Reply to any bot message with *"apagar"* (or synonyms like *"deletar"*, *"excluir"*), the bot figures out which reminder the user is referring to.
 - Send *"apagar 2"* to delete reminder number 2 from the list.
 
 If deletion fails (e.g. no reminder found), the bot sends an explanatory image showing how to do it correctly.
@@ -60,9 +60,9 @@ If deletion fails (e.g. no reminder found), the bot sends an explanatory image s
 ### Delaying Reminders
 
 Users can reply to a reminder notification with a delay instruction:
-- *"Adiar 30 minutos"* — reschedules by 30 minutes.
-- *"amanhã"* — reschedules to the next day.
-- A single character (e.g. *"1"*) — defaults to +5 minutes.
+- *"Adiar 30 minutos"*, reschedules by 30 minutes.
+- *"amanhã"*, reschedules to the next day.
+- A single character (e.g. *"1"*), defaults to +5 minutes.
 
 ### Help
 
@@ -77,9 +77,9 @@ The bot responds politely to greetings (*"oi"*, *"olá"*) and expressions of tha
 ## User Experience Details
 
 - **Typing indicator**: The bot shows "typing…" while processing every message, making the interaction feel live and conversational.
-- **Message reactions**: The bot reacts to every user message with an emoji reflecting the outcome — ⏳ (processing), ✅ (done), 🗑️ (deleted), 🚫 (blocked/limit reached).
+- **Message reactions**: The bot reacts to every user message with an emoji reflecting the outcome, ⏳ (processing), ✅ (done), 🗑️ (deleted), 🚫 (blocked/limit reached).
 - **Random reminder prefixes**: Delivery messages use varied prefixes (e.g. *"🔔 Lembrete:"*, *"⏰ Hora do:"*) to avoid feeling robotic.
-- **Context awareness**: When deleting or delaying, the bot inspects the quoted/replied-to message to figure out which reminder the user means — no need to look up a number.
+- **Context awareness**: When deleting or delaying, the bot inspects the quoted/replied-to message to figure out which reminder the user means, no need to look up a number.
 
 ---
 

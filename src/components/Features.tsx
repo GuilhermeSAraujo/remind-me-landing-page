@@ -15,7 +15,7 @@ const features = [
   {
     icon: "🔁",
     title: "Lembretes que se repetem",
-    desc: "Diário, semanal, mensal, só dias úteis, só fim de semana — você escolhe a frequência.",
+    desc: "Diário, semanal, mensal, só dias úteis, só fim de semana, você escolhe a frequência.",
     tag: "Recorrência",
   },
   {

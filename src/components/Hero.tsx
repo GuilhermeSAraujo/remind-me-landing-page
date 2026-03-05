@@ -130,7 +130,7 @@ export function Hero() {
               lineHeight="1.7"
             >
               Sem baixar app. Sem cadastrar cartão. Só manda mensagem e pronto
-              — o Remind Me cuida do resto.
+             , o Remind Me cuida do resto.
             </Text>
           </MotionBox>
 
@@ -156,7 +156,7 @@ export function Hero() {
                 _hover={{ opacity: 0.9, transform: "translateY(-2px)", boxShadow: "0 12px 40px rgba(37,211,102,0.3)" }}
                 transition="all 0.25s"
               >
-                Ativar agora — R$ 4,90/mês
+                Ativar agora
               </Button>
             </a>
             <a href="#how-it-works">

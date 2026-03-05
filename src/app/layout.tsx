@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Providers } from "./providers";
 
 export const metadata: Metadata = {
-  title: "Remind Me — Lembretes pelo WhatsApp",
+  title: "Remind Me - Lembretes no WhatsApp",
   description:
     "Crie lembretes no WhatsApp com linguagem natural. Sem app, sem cadastro. R$ 4,90/mês.",
 };
