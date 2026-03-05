@@ -54,7 +54,7 @@ const plans: Plan[] = [
       { text: "Ativação automática após pagamento", included: true },
     ],
     cta: "Assinar por R$ 4,90/mês",
-    href: "https://wa.me/5531971444094?text=Ol%C3%A1!%20Quero%20assinar%20o%20Remind%20Me%20Premium",
+    href: "https://wa.me/5531971444094?text=Quero%20assinar%20o%20Remind%20Me%20Premium",
     highlight: true,
     badge: "Mais popular",
     disabled: false,
